@@ -1,3 +1,10 @@
+/*
+ * @Author: super zhou4xin3xin3520@163.com
+ * @Date: 2022-11-07 17:36:12
+ * @LastEditors: super
+ * @LastEditTime: 2022-11-08 19:50:44
+ * @Description:
+ */
 package main
 
 import (
@@ -32,6 +39,12 @@ func dichotomyInsert(arr *[]int, insertNum int) {
 	(*arr)[insertIndex] = insertNum
 }
 
+/**
+ * @description: 找出插入的位置
+ * @param {*[]int} arr
+ * @param {int} insertNum
+ * @return {*}
+ */
 func dichotomy(arr *[]int, insertNum int) int {
 	var start int = 0
 	var end int = len(*arr) - 1
@@ -41,7 +54,7 @@ func dichotomy(arr *[]int, insertNum int) int {
 	if insertNum > (*arr)[len(*arr)-1] {
 		return len(*arr)
 	}
-	for start < end {
+	for start <= end {
 		middle := (start + end) / 2
 		if (*arr)[middle] == insertNum {
 			return middle
