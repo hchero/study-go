@@ -2,7 +2,7 @@
  * @Author: super zhou4xin3xin3520@163.com
  * @Date: 2022-11-09 11:27:56
  * @LastEditors: super
- * @LastEditTime: 2022-11-09 11:33:06
+ * @LastEditTime: 2022-11-09 11:34:22
  * @Description:结构体的定义
  */
 package main
@@ -23,6 +23,6 @@ func main() {
 
 	p1.ptr = &p1.Age
 	p1.slice = make([]int, 10)
-	p1.map1 = make(map[string]string, 10)
+	p1.map1 = make(map[string]string)
 	fmt.Println(p1)
 }
