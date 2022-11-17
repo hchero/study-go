@@ -8,6 +8,9 @@ package main
 
 import "fmt"
 
+type Student struct {
+}
+
 func TypeJudge(items ...interface{}) {
 	for index, x := range items {
 		switch x.(type) {
@@ -35,5 +38,7 @@ func main() {
 	var n4 string = "super"
 	var n5 int = 500
 	var n6 bool = true
-	TypeJudge(n1, n2, n3, n4, n5, n6)
+	var stu = Student{}
+	var stu2 = &Student{}
+	TypeJudge(n1, n2, n3, n4, n5, n6, stu, stu2)
 }
