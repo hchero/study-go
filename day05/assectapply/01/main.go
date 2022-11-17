@@ -1,7 +1,7 @@
 /*
  * @Author: super zhou4xin3xin3520@163.com
  * @Date: 2022-11-16 15:26:01
- * @LastEditors: error: git config user.name & please set dead value or install git
+ * @LastEditors: super
  * @Description:多态案例
  */
 package main
