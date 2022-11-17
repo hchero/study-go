@@ -1,7 +1,7 @@
 /*
  * @Author: super zhou4xin3xin3520@163.com
  * @Date: 2022-11-16 15:26:01
- * @LastEditors: super
+ * @LastEditors: error: git config user.name & please set dead value or install git
  * @Description:多态案例
  */
 package main
@@ -27,6 +27,9 @@ type Phone struct {
 
 func (computer Computer) Working(usb Usb) {
 	usb.Start()
+	if phone, ok := usb.(Phone); ok {
+		phone.Call()
+	}
 	usb.Stop()
 }
 
@@ -35,6 +38,10 @@ func (p Phone) Start() {
 }
 func (p Phone) Stop() {
 	fmt.Println("手机停止工作..")
+}
+
+func (p Phone) Call() {
+	fmt.Println("手机打电话..")
 }
 
 type Camera struct {
